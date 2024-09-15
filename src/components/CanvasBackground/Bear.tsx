@@ -8,6 +8,12 @@ const Bear = (props: { position: [number, number, number] }) => {
   // const [prevTime, setPrevTime] = useState(0);
   const [initialTime, setInitialTime] = useState(0);
 
+  const floatInPlace = (bearModel: Group, angle: number) => {
+    bearModel.position.y = Math.sin(angle) * 0.25 + 0.5;
+    bearModel.rotation.z = Math.cos(angle) * 0.1;
+    bearModel.rotation.x = Math.cos(angle) * 0.1;
+  };
+
   useFrame(({ clock }) => {
     if (initialTime === 0) setInitialTime(clock.getElapsedTime());
 
@@ -15,15 +21,15 @@ const Bear = (props: { position: [number, number, number] }) => {
     // setPrevTime(currentTime);
 
     if (bearRef.current) {
-      const angle = currentTime + initialTime;
-
-      bearRef.current.position.y = Math.sin(angle) * 0.25 + 0.25;
+      const bearModel = bearRef.current;
+      const angle = currentTime - initialTime;
+      floatInPlace(bearModel, angle);
     }
   });
 
   const { nodes, materials } = useGLTF("./models/Bear.glb");
 
-  const [angle] = useState(Math.random() * Math.PI * 2);
+  const [angleY] = useState(Math.random() * Math.PI * 2);
 
   const scale = 0.01;
 
@@ -32,7 +38,7 @@ const Bear = (props: { position: [number, number, number] }) => {
       ref={bearRef}
       {...props}
       scale={[scale, scale, scale]}
-      rotation={[0, angle, 0]}
+      rotation={[0, angleY, 0]}
       dispose={null}
     >
       <mesh
