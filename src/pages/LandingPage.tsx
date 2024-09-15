@@ -1,4 +1,5 @@
 import BearLogo from "../components/BearLogo";
+import Header from "../components/common/Header";
 import AboutInfo from "../components/LandingPageComponents/AboutInfo";
 import JobCard from "../components/LandingPageComponents/JobCard";
 import ProjectCard from "../components/LandingPageComponents/ProjectCard";
@@ -16,6 +17,7 @@ const LandingPage = () => {
   return (
     <div className="px-[5%] pt-8 pb-10">
       <BearLogo />
+      <Header />
       <AboutInfo />
       <hr className="my-4 bg-black" />
       <Section title={"Projects"} children={projectsSectionChildren} />
