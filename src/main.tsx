@@ -15,7 +15,8 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       <Route index={true} path="/" element={<LandingPage />} />
     </Route>
-  )
+  ),
+  { basename: "/js-portfolio/" }
 );
 
 createRoot(document.getElementById("root")!).render(
