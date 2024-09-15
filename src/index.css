@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Quantico", sans-serif;
+  }
+}
+
+@layer components {
+  .landing-page-card {
+    /* @apply bg-[#F0F2FF]; */
+    @apply bg-slate-800;
+    @apply flex;
+    @apply py-4;
+    @apply border-2;
+    @apply border-slate-900;
+    @apply cursor-pointer;
+    @apply text-js-white;
+    /* @apply min-h-52; */
+
+    &:hover {
+      @apply border-[#F24236];
+
+      -webkit-box-shadow: 10px 10px 0px 0px rgba(46, 134, 171, 1);
+      -moz-box-shadow: 10px 10px 0px 0px rgba(46, 134, 171, 1);
+      box-shadow: 10px 10px 0px 0px rgba(46, 134, 171, 1);
+      transition: box-shadow ease-in 0.2s;
+    }
+  }
+}
+
+@font-face {
+  font-family: "Ostrich";
+  src: url("./fonts/OstrichSans-Heavy/ostrichsans-heavy-webfont.woff2")
+      format("woff2"),
+    url("./fonts/OstrichSans-Heavy/ostrichsans-heavy-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Quantico";
+  src: url("./fonts/Quantico/Quantico-Regular.ttf");
+}
+@font-face {
+  font-family: "Quantico";
+  src: url("./fonts/Quantico/Quantico-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Quantico";
+  src: url("./fonts/Quantico/Quantico-Italic.ttf");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Quantico";
+  src: url("./fonts/Quantico/Quantico-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
