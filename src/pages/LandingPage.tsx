@@ -14,7 +14,7 @@ const LandingPage = () => {
   const workSectionChildren = jobs.map((job) => <JobCard job={job} />);
 
   return (
-    <div className="flex w-full">
+    <div className="flex flex-col md:flex-row w-full">
       <div className="px-[5%] pt-8 pb-10 w-full md:w-5/6 lg:w-2/3 pointer-events-auto">
         <Header />
         <div className="font-ostrich text-8xl">Jay Srinivasan</div>
@@ -31,7 +31,9 @@ const LandingPage = () => {
           id="work"
         />
       </div>
-      <div className="w-0 md:w-1/6 lg:w-1/3 text-center h-fit">CLICK HERE!</div>
+      <div className="md:block md:w-1/6 lg:w-1/3 text-center h-96 md:h-fit">
+        CLICK HERE!
+      </div>
     </div>
   );
 };

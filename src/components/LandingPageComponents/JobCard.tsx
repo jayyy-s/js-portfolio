@@ -28,10 +28,13 @@ const JobCard = (props: JobCardProps) => {
   return (
     <div className="landing-page-card">
       <div className="hidden md:ml-4 md:w-1/3 px-3 py-2 flex-0 md:flex justify-center items-center">
-        <img className="blue-shadow border-2 border-js-brown max-w-48 max-h-40 bg-js-white px-6 py-5" src={logo} />
+        <img
+          className="max-w-48 max-h-40 bg-js-white px-6 py-5"
+          src={logo}
+        />
       </div>
-      <div className="md:w-2/3 md:pl-12 px-3 flex flex-col">
-        <div className="flex flex-col xl:flex-row items-end">
+      <div className="w-full md:w-2/3 md:pl-12 px-3 flex flex-col">
+        <div className="flex flex-col 2xl:flex-row">
           <div className="font-semibold flex-1">
             {company}: {title}
           </div>
@@ -42,7 +45,7 @@ const JobCard = (props: JobCardProps) => {
         </div>
         <hr className="border-js-brown py-1" />
         <div className="grow">{description}</div>
-        <div className="flex flex-col sm:flex-row">
+        <div className="flex">
           <div className="flex items-end grow">
             <div className="flex items-end flex-wrap">{techStackIcons}</div>
           </div>

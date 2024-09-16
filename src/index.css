@@ -27,8 +27,6 @@
     @apply text-js-brown;
 
     &:hover {
-      @apply border-js-brown;
-
       @apply blue-shadow;
       transition: box-shadow ease-in 0.2s;
     }
