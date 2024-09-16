@@ -5,13 +5,14 @@ import JobCard from "./JobCard";
 type SectionProps = {
   title: string;
   children: ReactElement<typeof ProjectCard>[] | ReactElement<typeof JobCard>[];
+  id: string;
 };
 
 const Section = (props: SectionProps) => {
-  const { title, children } = props;
+  const { title, children, id } = props;
 
   return (
-    <div className="w-full">
+    <div className="w-full" id={id}>
       <div className="my-10 font-ostrich text-6xl">{title}</div>
       <div className="space-y-6">{children}</div>
     </div>

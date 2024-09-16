@@ -113,7 +113,6 @@ const Bear = () => {
 
   const handleMouseMove = useCallback(
     (event: MouseEvent) => {
-      console.log("hi");
       handleMove(event.clientX, event.clientY);
     },
     [handleMove]

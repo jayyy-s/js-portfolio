@@ -19,8 +19,16 @@ const LandingPage = () => {
       <div className="font-ostrich text-8xl">Jay Srinivasan</div>
       <AboutInfo />
       <hr className="my-4 bg-black" />
-      <Section title={"Projects"} children={projectsSectionChildren} />
-      <Section title={"Work Experience"} children={workSectionChildren} />
+      <Section
+        title={"Projects"}
+        children={projectsSectionChildren}
+        id="projects"
+      />
+      <Section
+        title={"Work Experience"}
+        children={workSectionChildren}
+        id="work"
+      />
     </div>
   );
 };
