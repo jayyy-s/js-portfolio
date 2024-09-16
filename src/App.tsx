@@ -5,12 +5,12 @@ import CanvasBackground from "./components/CanvasBackground/CanvasBackground";
 
 function App() {
   return (
-    <div className="">
+    <>
       <CanvasBackground />
-      <div className="absolute top-0 left-0 w-full md:w-5/6 lg:w-2/3">
+      <div className="absolute top-0 left-0 pointer-events-none">
         <Outlet />
       </div>
-    </div>
+    </>
   );
 }
 

@@ -24,8 +24,8 @@ const SceneControl = () => {
 
 const CanvasBackground = () => {
   return (
-    <div className="fixed w-screen h-screen bg-js-white cursor-crosshair">
-      <Canvas camera={{ position: [0, 20, 4], far: 100, fov: 25 }}>
+    <div className="fixed w-full h-full bg-js-white cursor-crosshair">
+      <Canvas camera={{ position: [0, 20, 0], far: 100, fov: 25 }}>
         <SceneControl />
         <Floor />
         <ambientLight intensity={2.5} />

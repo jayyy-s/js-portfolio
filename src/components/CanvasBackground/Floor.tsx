@@ -14,7 +14,7 @@ const Floor = () => {
   ]);
 
   floorTextures.forEach((texture) => {
-    texture.repeat.set(8, 8);
+    texture.repeat.set(16, 16);
     texture.wrapS = RepeatWrapping;
     texture.wrapT = RepeatWrapping;
   });
@@ -29,7 +29,7 @@ const Floor = () => {
   return (
     <group>
       <mesh rotation={[-Math.PI / 2, 0, 0]} onClick={handleClick}>
-        <planeGeometry args={[100, 100, 10, 10]} />
+        <planeGeometry args={[200, 200]} />
         <meshStandardMaterial
           aoMap={floorAo}
           normalMap={floorNormal}
