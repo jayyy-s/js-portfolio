@@ -47,7 +47,7 @@ const JobCard = (props: JobCardProps) => {
             <div className="flex items-end flex-wrap">{techStackIcons}</div>
           </div>
           <div className="flex justify-end items-end grow">
-            {<div className="flex items-end">{companyLiveLink}</div>}
+            {<div className="flex items-end mb-[-6px]">{companyLiveLink}</div>}
           </div>
         </div>
       </div>

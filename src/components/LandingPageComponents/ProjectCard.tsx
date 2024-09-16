@@ -40,7 +40,7 @@ const ProjectCard = (props: ProjectCardProps) => {
             <div className="flex items-end flex-wrap">{techStackIcons}</div>
           </div>
           <div className="flex justify-end items-end grow">
-            <div className="flex items-end">{[...repoIcons, liveLink]}</div>
+            <div className="flex items-end mb-[-6px]">{[...repoIcons, liveLink]}</div>
           </div>
         </div>
       </div>

@@ -28,7 +28,7 @@ const CanvasBackground = () => {
       <Canvas camera={{ position: [0, 20, 4], far: 100, fov: 25 }}>
         <SceneControl />
         <Floor />
-        <ambientLight intensity={3} />
+        <ambientLight intensity={2.5} />
         <directionalLight position={[1, 0, 0]} />
       </Canvas>
     </div>
