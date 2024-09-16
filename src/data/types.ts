@@ -24,6 +24,7 @@ type Project = {
   techStack: Technology[];
   link: string;
   repoLinks: string[];
+  thumbnail: string;
   pictures: string[];
 };
 

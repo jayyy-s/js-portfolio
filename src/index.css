@@ -9,23 +9,27 @@
 }
 
 @layer components {
+  .blue-shadow {
+    -webkit-box-shadow: 10px 10px 0px 0px rgba(46, 134, 171, 1);
+    -moz-box-shadow: 10px 10px 0px 0px rgba(46, 134, 171, 1);
+    box-shadow: 10px 10px 0px 0px rgba(46, 134, 171, 1);
+  }
+}
+
+@layer components {
   .landing-page-card {
-    /* @apply bg-[#F0F2FF]; */
-    @apply bg-slate-800;
+    @apply bg-js-white;
     @apply flex;
     @apply py-4;
     @apply border-2;
     @apply border-slate-900;
     @apply cursor-pointer;
-    @apply text-js-white;
-    /* @apply min-h-52; */
+    @apply text-js-brown;
 
     &:hover {
-      @apply border-[#F24236];
+      @apply border-js-brown;
 
-      -webkit-box-shadow: 10px 10px 0px 0px rgba(46, 134, 171, 1);
-      -moz-box-shadow: 10px 10px 0px 0px rgba(46, 134, 171, 1);
-      box-shadow: 10px 10px 0px 0px rgba(46, 134, 171, 1);
+      @apply blue-shadow;
       transition: box-shadow ease-in 0.2s;
     }
   }

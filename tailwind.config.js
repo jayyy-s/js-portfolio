@@ -10,6 +10,8 @@ export default {
       colors: {
         "js-white": "#fffdf0",
         "js-hover": "#214B78",
+        "js-red": "#F24236",
+        "js-brown": "#564138"
       },
     },
   },

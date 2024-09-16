@@ -6,7 +6,7 @@ type ProjectCardProps = {
 };
 
 const ProjectCard = (props: ProjectCardProps) => {
-  const { name, date, description, techStack, link, repoLinks, pictures } =
+  const { name, date, description, techStack, link, repoLinks, thumbnail } =
     props.project;
 
   const techStackIcons = techStack.map((tech) => <SkillBadge tech={tech} />);
@@ -25,22 +25,24 @@ const ProjectCard = (props: ProjectCardProps) => {
 
   return (
     <div className="landing-page-card">
-      <div className="hidden md:flex md:w-1/3 items-start px-3 flex-0">
-        <img className="rounded-sm" src={pictures[0]} />
+      <div className="hidden md:ml-4 md:w-1/3 px-3 py-2 flex-0 md:flex justify-center items-center">
+        <img className="blue-shadow border-2 border-js-brown max-w-48 max-h-40 bg-js-white px-6 py-5" src={thumbnail} />
       </div>
       <div className="md:w-2/3 md:pl-12 px-3 flex flex-col">
-        <div className="flex">
+        <div className="flex items-end">
           <div className="font-semibold flex-1">{name}</div>
           <div>{date}</div>
         </div>
-        <hr className="border-js-white py-1" />
+        <hr className="border-js-brown py-1" />
         <div className="grow">{description}</div>
         <div className="flex flex-col sm:flex-row">
           <div className="flex items-end grow">
             <div className="flex items-end flex-wrap">{techStackIcons}</div>
           </div>
           <div className="flex justify-end items-end grow">
-            <div className="flex items-end mb-[-6px]">{[...repoIcons, liveLink]}</div>
+            <div className="flex items-end mb-[-6px]">
+              {[...repoIcons, liveLink]}
+            </div>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import type { Project } from "./types";
 import { technology } from "./types";
+import FakeArtist from "../assets/images/logos/FakeArtist.png";
 import fakeArtistVoting from "../assets/images/fake_artist_voting_screen.png";
 import fakeArtistWinner from "../assets/images/fake_artist_winner_screen.png";
 
@@ -23,6 +24,7 @@ export const projects: Project[] = [
       "https://github.com/jayyy-s/fake-artist-frontend",
       "https://github.com/jayyy-s/fake-artist-backend",
     ],
+    thumbnail: FakeArtist,
     pictures: [fakeArtistVoting, fakeArtistWinner],
   },
 ];
