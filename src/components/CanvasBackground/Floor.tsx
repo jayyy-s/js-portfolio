@@ -7,10 +7,10 @@ const Floor = () => {
   const [positions, setPositions] = useState<[number, number, number][]>([]);
 
   const floorTextures = useLoader(TextureLoader, [
-    "./vehicle-interior1-bl/vehicle-interior1-ao.png",
-    "./vehicle-interior1-bl/vehicle-interior1-normal-ogl.png",
-    "./vehicle-interior1-bl/vehicle-interior1-roughness.png",
-    "./vehicle-interior1-bl/vehicle-interior1-albedo.png",
+    "./vehicle-interior1-bl/vehicle-interior1-ao.webp",
+    "./vehicle-interior1-bl/vehicle-interior1-normal-ogl.webp",
+    "./vehicle-interior1-bl/vehicle-interior1-roughness.webp",
+    "./vehicle-interior1-bl/vehicle-interior1-albedo.webp",
   ]);
 
   floorTextures.forEach((texture) => {
@@ -29,7 +29,7 @@ const Floor = () => {
   return (
     <group>
       <mesh rotation={[-Math.PI / 2, 0, 0]} onClick={handleClick}>
-        <planeGeometry args={[200, 200, 10, 10]} />
+        <planeGeometry args={[100, 100, 10, 10]} />
         <meshStandardMaterial
           aoMap={floorAo}
           normalMap={floorNormal}

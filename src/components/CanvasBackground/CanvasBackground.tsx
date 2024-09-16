@@ -16,7 +16,7 @@ const SceneControl = () => {
 
   useEffect(() => {
     const normalizedY = scrollY / window.innerHeight;
-    camera.position.z = 75 * normalizedY;
+    camera.position.z = 50 * normalizedY;
   }, [camera, camera.position, scrollY]);
 
   return <></>;
@@ -25,7 +25,7 @@ const SceneControl = () => {
 const CanvasBackground = () => {
   return (
     <div className="fixed w-screen h-screen bg-js-white cursor-crosshair">
-      <Canvas camera={{ position: [0, 10, 4], far: 100 }}>
+      <Canvas camera={{ position: [0, 20, 4], far: 100, fov: 25 }}>
         <SceneControl />
         <Floor />
         <ambientLight intensity={3} />

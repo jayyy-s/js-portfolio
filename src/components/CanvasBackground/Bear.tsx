@@ -31,7 +31,7 @@ const Bear = (props: { position: [number, number, number] }) => {
 
   const [angleY] = useState(Math.random() * Math.PI * 2);
 
-  const scale = 0.01;
+  const scale = 0.01 * 0.5;
 
   return (
     <group
@@ -68,5 +68,7 @@ const Bear = (props: { position: [number, number, number] }) => {
     </group>
   );
 };
+
+useGLTF.preload("./models/Bear.glb");
 
 export default Bear;
