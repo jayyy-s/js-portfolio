@@ -14,7 +14,7 @@ const HeaderLink = (props: { title: string; section?: string }) => {
 
   return (
     <a
-      className="cursor-pointer block text-xl px-2 rounded hover:bg-gray-600/40"
+      className="cursor-pointer block text-xl text-js-brown px-2 bg-js-white border-2 border-js-brown hover:blue-shadow-sm"
       href={section}
       onClick={goToLink}
     >
