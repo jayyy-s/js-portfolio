@@ -13,6 +13,7 @@ const technology = {
   vercel: "Vercel",
   mongodb: "MongoDB",
   jest: "Jest",
+  threejs: "Three.js",
 } as const;
 
 type Technology = (typeof technology)[keyof typeof technology];
