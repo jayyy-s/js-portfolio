@@ -17,8 +17,7 @@ const router = createHashRouter(
       <Route index={true} path="/" element={<LandingPage />} />
       <Route path="/contact" element={<ContactPage />} />
     </Route>
-  ),
-  { basename: "/js-portfolio/" }
+  )
 );
 
 createRoot(document.getElementById("root")!).render(

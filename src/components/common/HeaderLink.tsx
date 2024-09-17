@@ -1,11 +1,19 @@
 import { MouseEvent } from "react";
+import { useNavigate } from "react-router-dom";
 
 const HeaderLink = (props: { title: string; href: string }) => {
   const { title, href } = props;
+  const navigate = useNavigate();
 
   const goToLink = (event: MouseEvent) => {
-    if (!href || !href.startsWith("#")) return;
+    if (!href) return;
     event.preventDefault();
+
+    if (!href.startsWith("#")) {
+      navigate(href);
+      return;
+    }
+
     const target = document.querySelector(href);
     if (!target) return;
 
