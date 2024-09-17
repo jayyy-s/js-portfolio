@@ -28,7 +28,11 @@ const Floor = () => {
 
   return (
     <group>
-      <mesh rotation={[-Math.PI / 2, 0, 0]} onClick={handleClick}>
+      <mesh
+        rotation={[-Math.PI / 2, 0, 0]}
+        onClick={handleClick}
+        position={[0, 0, 20]}
+      >
         <planeGeometry args={[200, 200]} />
         <meshStandardMaterial
           aoMap={floorAo}
