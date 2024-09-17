@@ -9,11 +9,13 @@ import {
 import App from "./App.tsx";
 import "./index.css";
 import LandingPage from "./pages/LandingPage.tsx";
+import ContactPage from "./pages/ContactPage.tsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index={true} path="/" element={<LandingPage />} />
+      <Route path="/contact" element={<ContactPage />} />
     </Route>
   ),
   { basename: "/js-portfolio/" }

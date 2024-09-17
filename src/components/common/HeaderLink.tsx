@@ -1,12 +1,12 @@
 import { MouseEvent } from "react";
 
-const HeaderLink = (props: { title: string; section?: string }) => {
-  const { title, section } = props;
+const HeaderLink = (props: { title: string; href: string }) => {
+  const { title, href } = props;
 
   const goToLink = (event: MouseEvent) => {
+    if (!href || !href.startsWith("#")) return;
     event.preventDefault();
-    if (!section) return;
-    const target = document.querySelector(section);
+    const target = document.querySelector(href);
     if (!target) return;
 
     target.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -15,7 +15,7 @@ const HeaderLink = (props: { title: string; section?: string }) => {
   return (
     <a
       className="cursor-pointer block text-xl text-js-brown px-2 bg-js-white border-2 border-js-brown hover:blue-shadow-sm"
-      href={section}
+      href={href}
       onClick={goToLink}
     >
       {title}
