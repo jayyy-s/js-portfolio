@@ -22,7 +22,7 @@ const HeaderLink = (props: { title: string; href: string }) => {
 
   return (
     <a
-      className="cursor-pointer block text-xl text-js-brown px-2 bg-js-white border-2 border-js-brown hover:blue-shadow-sm"
+      className="border-box cursor-pointer block text-xl text-js-brown px-2 hover:blue-shadow-sm"
       href={href}
       onClick={goToLink}
     >

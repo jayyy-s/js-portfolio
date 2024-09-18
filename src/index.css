@@ -25,12 +25,16 @@
 }
 
 @layer components {
-  .landing-page-card {
+  .border-box {
     @apply bg-js-white;
+    @apply border-2;
+    @apply border-js-brown;
+  }
+
+  .landing-page-card {
+    @apply border-box;
     @apply flex;
     @apply py-4;
-    @apply border-2;
-    @apply border-slate-900;
     @apply cursor-pointer;
     @apply text-js-brown;
 

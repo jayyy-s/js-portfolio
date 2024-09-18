@@ -73,7 +73,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-js-white border-2 border-js-brown blue-shadow p-10 pb-6 space-y-5 flex flex-col">
+    <div className="border-box blue-shadow p-10 pb-6 space-y-5 flex flex-col">
       <ContactInput
         inputLabel="Name"
         name="name"
@@ -111,7 +111,7 @@ const ContactForm = () => {
             {errorMessage}
           </div>
           <div
-            className="bg-js-white border-2 border-js-brown px-3 py-2 w-fit hover:bg-js-red cursor-pointer self-end"
+            className="border-box px-3 py-2 w-fit hover:bg-js-red cursor-pointer self-end"
             onClick={handleSend}
           >
             Send
