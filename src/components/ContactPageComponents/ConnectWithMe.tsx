@@ -3,7 +3,7 @@ type ConnectButtonProps = {
   iconClass: string;
 };
 
-const ConnectButtonProps = (props: ConnectButtonProps) => {
+const ConnectButton = (props: ConnectButtonProps) => {
   const { link, iconClass } = props;
 
   return (
@@ -20,11 +20,11 @@ const ConnectButtonProps = (props: ConnectButtonProps) => {
 const ConnectWithMe = () => {
   return (
     <div className="flex space-x-4">
-      <ConnectButtonProps
+      <ConnectButton
         link="https://www.linkedin.com/in/jay-srinivasan/"
         iconClass="devicon-linkedin-plain"
       />
-      <ConnectButtonProps
+      <ConnectButton
         link="https://github.com/jayyy-s"
         iconClass="devicon-github-original"
       />
