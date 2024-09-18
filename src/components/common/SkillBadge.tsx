@@ -16,7 +16,7 @@ const SkillBadge = (props: SkillBadgeProps) => {
       <i
         className={`devicon-${tech.toLowerCase().replace(/[^0-9a-z]/gi, "")}-${
           originalExtensionList.includes(tech) ? "original" : "plain"
-        } mr-1 text-leg`}
+        } mr-1 text-lg`}
       ></i>
       <div>{tech}</div>
     </div>

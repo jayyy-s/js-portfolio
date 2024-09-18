@@ -11,6 +11,7 @@ type ContactInputProps = {
 
 const ContactInput = (props: ContactInputProps) => {
   const { inputLabel, name, onChange, value, isTextArea, required } = props;
+
   const inputElement = isTextArea ? (
     <textarea
       className="border border-js-brown h-40 w-full py-2 px-2 focus:outline-none resize-y"
@@ -27,16 +28,15 @@ const ContactInput = (props: ContactInputProps) => {
       value={value}
       type="text"
       required={required}
+      id="contact-name"
     />
   );
 
   return (
-    <div className="">
-      <label className="">
-        <div>{`${inputLabel}${required ? "*" : ""}`}</div>
-        {inputElement}
-      </label>
-    </div>
+    <label>
+      <div>{`${inputLabel}${required ? "*" : ""}`}</div>
+      {inputElement}
+    </label>
   );
 };
 

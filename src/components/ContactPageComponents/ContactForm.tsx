@@ -73,7 +73,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="border-box blue-shadow p-10 pb-6 space-y-5 flex flex-col">
+    <div className="border-box blue-shadow p-10 pb-6 space-y-5 flex flex-col w-full">
       <ContactInput
         inputLabel="Name"
         name="name"
@@ -97,12 +97,12 @@ const ContactForm = () => {
         required
       />
       {emailSuccess && (
-        <div className="text-center w-80">
+        <div className="text-center">
           Thanks for the message! I'll respond as soon as possible.
         </div>
       )}
       {!emailSuccess && (
-        <div className="flex items-center w-80">
+        <div className="flex items-center">
           <div
             className={`flex-1 px-3 text-js-red ${
               showError ? "" : "invisible"
