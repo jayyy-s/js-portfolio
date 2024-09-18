@@ -98,7 +98,8 @@ const ContactForm = () => {
       />
       {emailSuccess && (
         <div className="text-center">
-          Thanks for the message! I'll respond as soon as possible.
+          <div>Thanks for the message!</div>
+          <div>I'll respond as soon as possible.</div>
         </div>
       )}
       {!emailSuccess && (
