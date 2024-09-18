@@ -15,6 +15,11 @@ const ContactForm = () => {
     });
   }, []);
 
+  const errorMessages = {
+    incompleteFields: "Please complete all fields!",
+    emailFailed: "Something went wrong.",
+  };
+
   const [emailData, setEmailData] = useState<EmailData>({
     name: "",
     email: "",
@@ -22,6 +27,9 @@ const ContactForm = () => {
   });
 
   const [showError, setShowError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const [emailSuccess, setEmailSuccess] = useState(false);
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -39,6 +47,7 @@ const ContactForm = () => {
       emailData.message === ""
     ) {
       setShowError(true);
+      setErrorMessage(errorMessages.incompleteFields);
       return;
     }
 
@@ -52,9 +61,14 @@ const ContactForm = () => {
       })
       .then(
         () => {
+          setEmailSuccess(true);
+          setEmailData({ name: "", email: "", message: "" });
           console.log("success");
         },
-        (error) => console.log("failed...", error)
+        (error) => {
+          setErrorMessage(errorMessages.emailFailed);
+          console.log("failed...", error);
+        }
       );
   };
 
@@ -82,17 +96,28 @@ const ContactForm = () => {
         isTextArea
         required
       />
-      <div className="flex items-center">
-        <div className={`px-3 text-js-red ${showError ? "" : "invisible"}`}>
-          Please complete all fields!
+      {emailSuccess && (
+        <div className="text-center w-80">
+          Thanks for the message! I'll respond as soon as possible.
         </div>
-        <div
-          className="bg-js-white border-2 border-js-brown px-3 py-2 w-fit hover:bg-js-red cursor-pointer self-end"
-          onClick={handleSend}
-        >
-          Send
+      )}
+      {!emailSuccess && (
+        <div className="flex items-center w-80">
+          <div
+            className={`flex-1 px-3 text-js-red ${
+              showError ? "" : "invisible"
+            }`}
+          >
+            {errorMessage}
+          </div>
+          <div
+            className="bg-js-white border-2 border-js-brown px-3 py-2 w-fit hover:bg-js-red cursor-pointer self-end"
+            onClick={handleSend}
+          >
+            Send
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

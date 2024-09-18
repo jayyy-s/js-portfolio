@@ -13,7 +13,7 @@ const ContactInput = (props: ContactInputProps) => {
   const { inputLabel, name, onChange, value, isTextArea, required } = props;
   const inputElement = isTextArea ? (
     <textarea
-      className="border border-js-brown h-36 w-full py-2 px-2 focus:outline-none resize-y"
+      className="border border-js-brown h-40 w-full py-2 px-2 focus:outline-none resize-y"
       onChange={onChange}
       name={name}
       value={value}
