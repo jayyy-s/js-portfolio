@@ -1,9 +1,9 @@
-type ContactPageSectionProps = {
+type PageSectionProps = {
   children: JSX.Element[];
   title: string;
 };
 
-const ContactPageSection = (props: ContactPageSectionProps) => {
+const PageSection = (props: PageSectionProps) => {
   const { title, children } = props;
 
   return (
@@ -14,4 +14,4 @@ const ContactPageSection = (props: ContactPageSectionProps) => {
   );
 };
 
-export default ContactPageSection;
+export default PageSection;

@@ -14,6 +14,7 @@ const Footer = () => {
         anyMatchedRoutes ? "" : "md:justify-start"
       } items-center pointer-events-auto`}
     >
+      <LinkButton title="Home" href="/" />
       <LinkButton title="Credit" href="/credit" />
       <LinkButton title="Resume" href={Resume} />
     </div>
