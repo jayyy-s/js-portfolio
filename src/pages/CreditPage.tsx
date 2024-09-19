@@ -2,7 +2,7 @@ import PageSection from "../components/common/PageSection";
 
 const BearCredit = () => {
   return (
-    <div className="border-box p-5 pointer-events-auto">
+    <div className="border-box blue-shadow p-5 pointer-events-auto">
       <div className="text-xl">
         <a
           className="underline hover:text-js-hover"
