@@ -1,8 +1,9 @@
 import type { Job } from "./types";
-import { technology } from "./types";
+import { skill, technology } from "./types";
 import OneCommunity from "../assets/images/logos/OneCommunity.webp";
 import BeFrugal from "../assets/images/logos/BeFrugal.png";
 import XSET from "../assets/images/logos/XSET.png";
+import Alia from "../assets/images/logos/Alia.webp";
 
 export const jobs: Job[] = [
   {
@@ -56,5 +57,18 @@ export const jobs: Job[] = [
     companyLink: "https://www.xset.com/",
     projectLinks: [],
     title: "Fullstack Software Engineer",
+  },
+  {
+    company: "Generate Product Development - Alia",
+    logo: Alia,
+    dateStart: "July 2022",
+    dateEnd: "December 2022",
+    techStack: [technology.trello],
+    skills: [skill.management, skill.leadership],
+    description:
+      "Led a team of engineers and designers to build the MVP of Alia - a Shopify popup that aids in customer conversion by rewarding customers for engaging in company content",
+    companyLink: "https://www.alialearn.com/",
+    projectLinks: [],
+    title: "Project Manager",
   },
 ];

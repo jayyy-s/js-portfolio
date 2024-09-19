@@ -16,7 +16,7 @@ const SceneControl = () => {
 
   useEffect(() => {
     const normalizedY = scrollY / window.innerHeight;
-    camera.position.z = 50 * normalizedY;
+    camera.position.z = 25 * normalizedY;
   }, [camera, camera.position, scrollY]);
 
   return <></>;

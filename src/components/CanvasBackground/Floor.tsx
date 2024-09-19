@@ -31,7 +31,7 @@ const Floor = () => {
       <mesh
         rotation={[-Math.PI / 2, 0, 0]}
         onClick={handleClick}
-        position={[0, 0, 20]}
+        position={[0, 0, 50]}
       >
         <planeGeometry args={[200, 200]} />
         <meshStandardMaterial

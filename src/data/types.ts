@@ -14,9 +14,17 @@ const technology = {
   mongodb: "MongoDB",
   jest: "Jest",
   threejs: "Three.js",
+  trello: "Trello",
 } as const;
 
 type Technology = (typeof technology)[keyof typeof technology];
+
+const skill = {
+  management: "Management",
+  leadership: "Leadership",
+} as const;
+
+type Skill = (typeof skill)[keyof typeof skill];
 
 type Project = {
   name: string;
@@ -35,11 +43,12 @@ type Job = {
   dateStart: string;
   dateEnd: string;
   techStack: Technology[];
+  skills?: Skill[];
   description: string;
   companyLink: string;
   projectLinks: string[];
   title: string;
 };
 
-export { technology };
-export type { Technology, Project, Job };
+export { technology, skill };
+export type { Technology, Skill, Project, Job };

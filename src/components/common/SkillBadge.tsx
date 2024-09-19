@@ -1,24 +1,25 @@
 import { technology } from "../../data/types";
 
 type SkillBadgeProps = {
-  tech: string;
+  skill: string;
+  isTech?: boolean;
 };
 
 const SkillBadge = (props: SkillBadgeProps) => {
-  const { tech } = props;
+  const { skill, isTech } = props;
   const originalExtensionList: string[] = [
     technology.express,
     technology.threejs,
   ];
 
+  const devIcon = `devicon-${skill.toLowerCase().replace(/[^0-9a-z]/gi, "")}-${
+    originalExtensionList.includes(skill) ? "original" : "plain"
+  }`;
+
   return (
-    <div className="flex px-2 py-[2px] rounded items-center bg-slate-300 mr-2 mt-2 text-slate-700">
-      <i
-        className={`devicon-${tech.toLowerCase().replace(/[^0-9a-z]/gi, "")}-${
-          originalExtensionList.includes(tech) ? "original" : "plain"
-        } mr-1 text-lg`}
-      ></i>
-      <div>{tech}</div>
+    <div className="flex px-2 py-[2px] rounded items-center bg-slate-300 text-slate-700">
+      {isTech && <i className={`${devIcon} mr-1`}></i>}
+      <div>{skill}</div>
     </div>
   );
 };

@@ -9,7 +9,9 @@ const ProjectCard = (props: ProjectCardProps) => {
   const { name, date, description, techStack, link, repoLinks, thumbnail } =
     props.project;
 
-  const techStackIcons = techStack.map((tech) => <SkillBadge tech={tech} />);
+  const techStackIcons = techStack.map((tech) => (
+    <SkillBadge skill={tech} isTech />
+  ));
 
   const repoIcons = repoLinks.map((link) => (
     <a href={link} target="_blank" className="ml-2">
@@ -40,7 +42,7 @@ const ProjectCard = (props: ProjectCardProps) => {
         <div className="grow">{description}</div>
         <div className="flex ">
           <div className="flex items-end grow">
-            <div className="flex items-end flex-wrap">{techStackIcons}</div>
+            <div className="flex items-end flex-wrap gap-2 mt-6">{techStackIcons}</div>
           </div>
           <div className="flex justify-end items-end grow">
             <div className="flex items-end mb-[-6px]">
