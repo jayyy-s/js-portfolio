@@ -73,7 +73,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="border-box blue-shadow p-10 pb-6 space-y-5 flex flex-col w-full">
+    <div className="border-box blue-shadow p-10 pb-6 space-y-5 flex flex-col w-72 sm:w-96">
       <ContactInput
         inputLabel="Name"
         name="name"
