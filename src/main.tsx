@@ -10,12 +10,14 @@ import App from "./App.tsx";
 import "./index.css";
 import LandingPage from "./pages/LandingPage.tsx";
 import ContactPage from "./pages/ContactPage.tsx";
+import CreditPage from "./pages/CreditPage.tsx";
 
 const router = createHashRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index={true} path="/" element={<LandingPage />} />
       <Route path="/contact" element={<ContactPage />} />
+      <Route path="/credit" element={<CreditPage />} />
     </Route>
   )
 );

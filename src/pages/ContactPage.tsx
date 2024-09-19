@@ -4,8 +4,8 @@ import ContactPageSection from "../components/ContactPageComponents/ContactPageS
 
 const ContactPage = () => {
   return (
-    <div className="pointer-events-auto w-screen min-h-screen flex flex-col items-center justify-center">
-      <div className="w-auto space-y-6 px-[5%]">
+    <div className="w-screen min-h-screen flex flex-col items-center justify-center py-20">
+      <div className="w-auto space-y-6 px-[5%] pointer-events-auto">
         <ContactPageSection title="Contact" children={[<ContactForm />]} />
         <ContactPageSection title="Connect" children={[<ConnectWithMe />]} />
       </div>

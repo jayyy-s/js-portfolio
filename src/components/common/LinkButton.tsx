@@ -1,7 +1,7 @@
 import { MouseEvent } from "react";
 import { useNavigate } from "react-router-dom";
 
-const HeaderLink = (props: { title: string; href: string }) => {
+const LinkButton = (props: { title: string; href: string }) => {
   const { title, href } = props;
   const navigate = useNavigate();
 
@@ -9,15 +9,24 @@ const HeaderLink = (props: { title: string; href: string }) => {
     if (!href) return;
     event.preventDefault();
 
-    if (!href.startsWith("#")) {
+    // Internal links, not PDF
+    if (href.startsWith("/") && !href.endsWith(".pdf")) {
       navigate(href);
       return;
     }
 
-    const target = document.querySelector(href);
-    if (!target) return;
+    // Anchor link
+    if (href.startsWith("#")) {
+      const target = document.querySelector(href);
+      if (!target) return;
 
-    target.scrollIntoView({ behavior: "smooth", block: "start" });
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    // PDF
+    if (href.endsWith(".pdf") && href.startsWith("/")) {
+      window.location.href = href;
+    }
   };
 
   return (
@@ -31,4 +40,4 @@ const HeaderLink = (props: { title: string; href: string }) => {
   );
 };
 
-export default HeaderLink;
+export default LinkButton;

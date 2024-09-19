@@ -15,7 +15,7 @@ const LandingPage = () => {
 
   return (
     <div className="flex flex-col md:flex-row w-full">
-      <div className="px-[5%] pt-8 pb-10 w-full md:w-5/6 lg:w-2/3 pointer-events-auto">
+      <div className="px-[5%] pt-8 pb-10 md:pb-40 w-full md:w-5/6 lg:w-2/3 pointer-events-auto">
         <Header />
         <div className="font-ostrich text-8xl">Jay Srinivasan</div>
         <AboutInfo />

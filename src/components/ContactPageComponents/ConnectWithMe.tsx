@@ -19,7 +19,7 @@ const ConnectButton = (props: ConnectButtonProps) => {
 
 const ConnectWithMe = () => {
   return (
-    <div className="flex space-x-4">
+    <div className="flex space-x-4 pb-2">
       <ConnectButton
         link="https://www.linkedin.com/in/jay-srinivasan/"
         iconClass="devicon-linkedin-plain"
