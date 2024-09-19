@@ -4,8 +4,22 @@ import OneCommunity from "../assets/images/logos/OneCommunity.webp";
 import BeFrugal from "../assets/images/logos/BeFrugal.png";
 import XSET from "../assets/images/logos/XSET.png";
 import Alia from "../assets/images/logos/Alia.webp";
+import ReDi from "../assets/images/logos/ReDi.png";
 
 export const jobs: Job[] = [
+  {
+    company: "ReDI School of Digital Integration",
+    logo: ReDi,
+    dateStart: "September 2024",
+    dateEnd: "Present",
+    techStack: [technology.javascript, technology.react],
+    skills: [skill.teaching],
+    description:
+      "Teaching over 20 students the fundamentals of JavaScript and React for non-profit educational organization",
+    companyLink: "https://www.redi-school.org/",
+    projectLinks: [],
+    title: "Teacher",
+  },
   {
     company: "One Community Global",
     logo: OneCommunity,

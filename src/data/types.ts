@@ -22,6 +22,7 @@ type Technology = (typeof technology)[keyof typeof technology];
 const skill = {
   management: "Management",
   leadership: "Leadership",
+  teaching: "Teaching",
 } as const;
 
 type Skill = (typeof skill)[keyof typeof skill];
