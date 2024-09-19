@@ -8,7 +8,7 @@ const PageSection = (props: PageSectionProps) => {
 
   return (
     <div className="space-y-2 justify-start w-full">
-      <div className="font-ostrich text-6xl">{title}</div>
+      <div className="font-ostrich text-6xl text-slate-900">{title}</div>
       {children}
     </div>
   );

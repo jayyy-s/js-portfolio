@@ -13,7 +13,7 @@ const Section = (props: SectionProps) => {
 
   return (
     <div className="w-full" id={id}>
-      <div className="my-10 font-ostrich text-6xl">{title}</div>
+      <div className="my-10 font-ostrich text-6xl text-slate-900">{title}</div>
       <div className="space-y-6">{children}</div>
     </div>
   );

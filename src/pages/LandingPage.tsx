@@ -17,9 +17,9 @@ const LandingPage = () => {
     <div className="flex flex-col md:flex-row w-full">
       <div className="px-[5%] pt-8 pb-10 md:pb-40 w-full md:w-5/6 lg:w-2/3 pointer-events-auto">
         <Header />
-        <div className="font-ostrich text-8xl">Jay Srinivasan</div>
+        <div className="font-ostrich text-8xl text-slate-900">Jay Srinivasan</div>
         <AboutInfo />
-        <hr className="my-4 bg-black" />
+        <hr className="my-4 border-slate-900" />
         <Section
           title={"Projects"}
           children={projectsSectionChildren}
@@ -31,7 +31,7 @@ const LandingPage = () => {
           id="work"
         />
       </div>
-      <div className="md:block md:w-1/6 lg:w-1/3 text-center h-96 md:h-fit">
+      <div className="md:block md:w-1/6 lg:w-1/3 text-center h-96 md:h-fit text-slate-900">
         CLICK HERE!
       </div>
     </div>

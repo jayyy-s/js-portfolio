@@ -3,7 +3,7 @@ import PageSection from "../components/common/PageSection";
 const BearCredit = () => {
   return (
     <div className="border-box blue-shadow p-5 pointer-events-auto">
-      <div className="text-xl">
+      <div className="text-xl text-js-brown">
         <a
           className="underline hover:text-js-hover"
           href="https://poly.pizza/m/evjB26aGfTh"
